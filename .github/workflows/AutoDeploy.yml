@@ -29,7 +29,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2-beta
         with:
-        node-version: 12
+        version: 12
            
         
       - name: GitHub Action for Yarn
@@ -37,9 +37,9 @@ jobs:
         with:
          cmd: install 
 
-      - name: Creating Build
-        run: yarn build
-
+      - name: Build Yarn and npm
+        uses: linchpin/action-build-yarn-npm@master
+     
       - name: installing surge
         run: npm install -g surge
       
