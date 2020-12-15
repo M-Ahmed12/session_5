@@ -1,7 +1,8 @@
-const CounterReducer = (state, dispatch) => {
-    switch (dispatch) {
+const CounterReducer = (state, action) => {
+    switch (action) {
       case 'INCREMENT':
         return state + 1
+        default:
     }
   }
 
